@@ -1,4 +1,4 @@
-basic.showIcon(IconNames.Happy)
+basic.showIcon(IconNames.Sad)
 basic.forever(function () {
 	
 })
