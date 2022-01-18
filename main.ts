@@ -1,11 +1,8 @@
+input.onPinPressed(TouchPin.P0, function () {
+    basic.showIcon(IconNames.Yes)
+})
 input.onButtonPressed(Button.A, function () {
-    basic.showLeds(`
-        . # . # .
-        . # . # .
-        . . . . .
-        # . . . #
-        . # # # .
-        `)
+    robotbit.StepperTurn(robotbit.Steppers.M1, robotbit.Turns.T1B0)
 })
 input.onButtonPressed(Button.AB, function () {
     basic.showLeds(`
@@ -17,15 +14,9 @@ input.onButtonPressed(Button.AB, function () {
         `)
 })
 input.onButtonPressed(Button.B, function () {
-    basic.showLeds(`
-        . # . # .
-        . # . # .
-        . . . . .
-        . # # # .
-        # . . . #
-        `)
+    robotbit.StepperTurn(robotbit.Steppers.M2, robotbit.Turns.T1B0)
 })
-basic.showString("Start!")
+robotbit.StpCarMove(10, 48)
 basic.forever(function () {
-    basic.showIcon(IconNames.Yes)
+	
 })
